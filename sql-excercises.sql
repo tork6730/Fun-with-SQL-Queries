@@ -17,8 +17,8 @@ where ContactTitle in ('Sales Representive', 'Marketing Manager') AND FAX IS NOT
 
 4. Return a list of customer ids from the Orders table with required dates between Jan 1, 1997 and Jan 1, 1998 and with freight under 100 units.
 
-SELECT CustomerID
-From Orders
+select CustomerID
+from Orders
 where RequiredDate between '1997-1-1' and '1998-1-1' and Freight < 100 
 
 Return a list of company names and contact names of all the Owners from the Customer table from Mexico, Sweden and Germany.
@@ -85,7 +85,7 @@ values ('Amazon')
 
 Change the company name from 'Amazon' to 'Amazon Prime Shipping' in the Shippers table using SQL
 
-Update Shippers
+update Shippers
 set CompanyName = ('Amazon Prime Shipping')
 where CompanyName = ('Amazon')
 
@@ -104,9 +104,9 @@ from Employees
 
 Add yourself to the Customers table with an order for 'Grandma's Boysenberry Spread
 
-Insert into Customers(CustomerID, CompanyName, ContactName)
+insert into Customers(CustomerID, CompanyName, ContactName)
 values ('6730' , 'Torkelson Enterprises' , 'Mathew Torkelson')
-Insert into Orders(CustomerID, ShipName)
+insert into Orders(CustomerID, ShipName)
 values ('6730' , 'Grandmas Boysenberry Spread')
 
 Remove yourself and your order from the database.
